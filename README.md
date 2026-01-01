@@ -1,4 +1,4 @@
-#**Project StudySync – Smart Study Planner Web Application**
+#**Project StudySync – Smart Study Planner Web Application**#
 
 ##**PROJECT OVERVIEW**
 
