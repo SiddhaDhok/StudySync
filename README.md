@@ -1,361 +1,370 @@
-Project StudySync – Smart Study Planner Web Application
-PROJECT OVERVIEW
+**Project StudySync – Smart Study Planner Web Application**
+
+**PROJECT OVERVIEW**
 
 StudySync is an intelligent web-based study planner designed to help students create optimized study schedules based on subject difficulty, available time, and exam deadlines. The application uses a priority-based algorithm to ensure students focus more time on challenging subjects while maintaining balanced learning across all topics.
 
-KEY FEATURES
+**KEY FEATURES**
+
 INTELLIGENT PRIORITY SYSTEM
 
-Numerical difficulty levels: Easy (1), Medium (2), Hard (3)
+-Numerical difficulty levels: Easy (1), Medium (2), Hard (3)
 
-Priority Score = Difficulty Level × Days Until Exam
+-Priority Score = Difficulty Level × Days Until Exam
 
-Automatic task ordering by priority (highest first)
+-Automatic task ordering by priority (highest first)
 
-More study time allocated to higher priority subjects
+-More study time allocated to higher priority subjects
 
 MULTIPLE SCHEDULE MANAGEMENT
 
-Create unlimited study schedules
+-Create unlimited study schedules
 
-Each schedule has a unique title and purpose
+-Each schedule has a unique title and purpose
 
-Easy switching between schedules via dropdown menu
+-Easy switching between schedules via dropdown menu
 
-Edit existing schedules without losing progress
+-Edit existing schedules without losing progress
 
-Delete schedules with confirmation dialog
+-Delete schedules with confirmation dialog
 
 CUSTOMIZABLE STUDY PARAMETERS
 
-Set daily study hours (default: 3 hours, customizable 1–12 hours)
+-Set daily study hours (default: 3 hours, customizable 1–12 hours)
 
-Input exam date for automatic priority calculation
+-Input exam date for automatic priority calculation
 
-Add multiple subjects with individual difficulty ratings
+-Add multiple subjects with individual difficulty ratings
 
-Minimum 1-hour allocation per subject per day
+-Minimum 1-hour allocation per subject per day
 
 PROGRESS TRACKING & ACHIEVEMENTS
 
-Overall plan progress with visual progress bar
+-Overall plan progress with visual progress bar
 
-Daily progress tracking for each day of the week
+-Daily progress tracking for each day of the week
 
-Achievement badges when completing days or entire plans
+-Achievement badges when completing days or entire plans
 
-Visual indicators for completed tasks
+-Visual indicators for completed tasks
 
-Percentage completion display
+-Percentage completion display
 
 TASK MANAGEMENT
 
-Check off completed tasks with visual feedback
+-Check off completed tasks with visual feedback
 
-Reschedule incomplete tasks to the next day
+-Reschedule incomplete tasks to the next day
 
-Tasks automatically sorted by priority within each day
+-Tasks automatically sorted by priority within each day
 
-Persistent storage using browser localStorage
+-Persistent storage using browser localStorage
 
 POMODORO TIMER
 
-Integrated focus timer for study sessions
+-Integrated focus timer for study sessions
 
-Customizable duration (default: 25 minutes)
+-Customizable duration (default: 25 minutes)
 
-Start, pause, and reset functionality
+-Start, pause, and reset functionality
 
-Browser notification when timer completes
+-Browser notification when timer completes
 
-Visual countdown display
+-Visual countdown display
 
 MODERN USER INTERFACE
 
-Responsive design for desktop and mobile devices
+-Responsive design for desktop and mobile devices
 
-Beautiful gradient color scheme (purple/blue theme)
+-Beautiful gradient color scheme (purple/blue theme)
 
-Clean card-based layout with smooth animations
+-Clean card-based layout with smooth animations
 
-Intuitive icons and visual feedback
+-Intuitive icons and visual feedback
 
-Accessibility-compliant design
+-Accessibility-compliant design
 
 MOTIVATIONAL ELEMENTS
 
-Inspirational quote:
+-Inspirational quote:
 "Hard work defeats talent when talent doesn't work hard."
 
-Achievement celebrations with animated badges
+-Achievement celebrations with animated badges
 
-Progress visualization to maintain motivation
+-Progress visualization to maintain motivation
 
-Clear visual hierarchy showing priorities
+-Clear visual hierarchy showing priorities
 
-TECHNICAL SPECIFICATIONS
+**TECHNICAL SPECIFICATIONS**
+
 FRONTEND TECHNOLOGIES
 
-HTML5 with semantic markup
+-HTML5 with semantic markup
 
-CSS3 with modern features (Grid, Flexbox, Animations)
+-CSS3 with modern features (Grid, Flexbox, Animations)
 
-Vanilla JavaScript (ES6+) for all functionality
+-Vanilla JavaScript (ES6+) for all functionality
 
-Font Awesome icons for visual elements
+-Font Awesome icons for visual elements
 
-Google Fonts (Inter) for typography
+-Google Fonts (Inter) for typography
 
 ARCHITECTURE
 
-Single Page Application (SPA) design
+-Single Page Application (SPA) design
 
-Object-oriented JavaScript with StudyPlanner class
+-Object-oriented JavaScript with StudyPlanner class
 
-Event-driven programming model
+-Event-driven programming model
 
-Local storage for data persistence
+-Local storage for data persistence
 
-No external dependencies or frameworks
+-No external dependencies or frameworks
 
 DATA STORAGE
 
-Browser localStorage for persistent data
+-Browser localStorage for persistent data
 
-JSON format for schedule storage
+-JSON format for schedule storage
 
-Automatic save on all user actions
+-Automatic save on all user actions
 
-Data survives browser restarts
+-Data survives browser restarts
 
-RESPONSIVE DESIGN
+-RESPONSIVE DESIGN
 
-Mobile-first approach
+-Mobile-first approach
 
-Breakpoints for tablets and desktops
+-Breakpoints for tablets and desktops
 
-Flexible layouts that adapt to screen size
+-Flexible layouts that adapt to screen size
 
-Touch-friendly interface elements
+-Touch-friendly interface elements
 
-ALGORITHM DETAILS
+**ALGORITHM DETAILS**
+
 PRIORITY CALCULATION
 
-User inputs subjects with difficulty levels (1–3)
+-User inputs subjects with difficulty levels (1–3)
 
-User sets exam date
+-User sets exam date
 
-System calculates days until exam
+-System calculates days until exam
 
-Priority Score = Difficulty × Days Until Exam
+-Priority Score = Difficulty × Days Until Exam
 
-Subjects sorted by priority score (descending)
+-Subjects sorted by priority score (descending)
 
 TIME ALLOCATION
 
-Calculate total priority score for all subjects
+-Calculate total priority score for all subjects
 
-Allocate time proportionally based on priority scores
+-Allocate time proportionally based on priority scores
 
-Ensure minimum 1 hour per subject per day
+-Ensure minimum 1 hour per subject per day
 
-Distribute remaining hours based on priority ratios
+-Distribute remaining hours based on priority ratios
 
 DAILY SCHEDULING
 
-Generate tasks for each day of the week
+-Generate tasks for each day of the week
 
-Sort tasks within each day by priority score
+-Sort tasks within each day by priority score
 
-Higher priority subjects appear first each day
+-Higher priority subjects appear first each day
 
-Consistent scheduling across all seven days
+-Consistent scheduling across all seven days
 
 PROGRESS TRACKING
 
-Track completion status for each individual task
+-Track completion status for each individual task
 
-Calculate daily progress: completed tasks / total tasks per day
+-Calculate daily progress: completed tasks / total tasks per day
 
-Calculate overall progress: completed tasks / total tasks
+-Calculate overall progress: completed tasks / total tasks
 
-Display visual progress bars and achievement badges
+-Display visual progress bars and achievement badges
 
-USER WORKFLOW
+**USER WORKFLOW**
+
 SCHEDULE CREATION
 
-Click "New Schedule" button
+-Click "New Schedule" button
 
-Enter schedule title (e.g., "Final Exams", "Midterm Prep")
+-Enter schedule title (e.g., "Final Exams", "Midterm Prep")
 
-Set daily study hours preference
+-Set daily study hours preference
 
-Select exam date from date picker
+-Select exam date from date picker
 
-Add subjects with difficulty ratings
+-Add subjects with difficulty ratings
 
-Click "Generate Study Plan"
+-Click "Generate Study Plan"
 
 SCHEDULE MANAGEMENT
 
-Select schedules from dropdown menu
+-Select schedules from dropdown menu
 
-Edit existing schedules to modify subjects or dates
+-Edit existing schedules to modify subjects or dates
 
-Delete schedules when no longer needed
+-Delete schedules when no longer needed
 
-Switch between multiple active schedules
+-Switch between multiple active schedules
 
 DAILY STUDY ROUTINE
 
-View prioritized tasks for each day
+-View prioritized tasks for each day
 
-Check off completed tasks as you finish them
+-Check off completed tasks as you finish them
 
-Use integrated Pomodoro timer for focused sessions
+-Use integrated Pomodoro timer for focused sessions
 
-Reschedule incomplete tasks to next day if needed
+-Reschedule incomplete tasks to next day if needed
 
 PROGRESS MONITORING
 
-Monitor daily completion percentages
+-Monitor daily completion percentages
 
-Track overall plan progress
+-Track overall plan progress
 
-Celebrate achievements when completing days/plans
+-Celebrate achievements when completing days/plans
 
-Adjust study habits based on progress insights
+-Adjust study habits based on progress insights
 
-FILE STRUCTURE
-index.html   - Main HTML structure and layout  
-styles.css   - Complete CSS styling and responsive design  
-script.js    - JavaScript functionality and StudyPlanner class  
+**FILE STRUCTURE**
 
-BROWSER COMPATIBILITY
+-index.html   - Main HTML structure and layout  
+-styles.css   - Complete CSS styling and responsive design  
+-script.js    - JavaScript functionality and StudyPlanner class  
+
+**BROWSER COMPATIBILITY**
+
 SUPPORTED BROWSERS
 
-Chrome 70+ (recommended)
+-Chrome 70+ (recommended)
 
-Firefox 65+
+-Firefox 65+
 
-Safari 12+
+-Safari 12+
 
-Edge 79+
+-Edge 79+
 
 REQUIRED FEATURES
 
-localStorage support
+-localStorage support
 
-ES6 JavaScript features
+-ES6 JavaScript features
 
-CSS Grid and Flexbox
+-CSS Grid and Flexbox
 
-Date input type
+-Date input type
 
-Notification API (optional, for timer alerts)
+-Notification API (optional, for timer alerts)
 
-FUTURE ENHANCEMENT POSSIBILITIES
+**FUTURE ENHANCEMENT POSSIBILITIES**
+
 ADVANCED FEATURES
 
-Study streak tracking
+-Study streak tracking
 
-Performance analytics and insights
+-Performance analytics and insights
 
-Integration with calendar applications
+-Integration with calendar applications
 
-Study group collaboration features
+-Study group collaboration features
 
-Subject-specific study techniques suggestions
+-Subject-specific study techniques suggestions
 
 TECHNICAL IMPROVEMENTS
 
-Cloud synchronization across devices
+-Cloud synchronization across devices
 
-Offline functionality with service workers
+-Offline functionality with service workers
 
-Export schedules to PDF or calendar formats
+-Export schedules to PDF or calendar formats
 
-Dark mode theme option
+-Dark mode theme option
 
-Advanced notification system
+-Advanced notification system
 
 GAMIFICATION
 
-Point system for completed tasks
+-Point system for completed tasks
 
-Achievement levels and badges
+-Achievement levels and badges
 
-Leaderboards for study groups
+-Leaderboards for study groups
 
-Reward system for consistency
+-Reward system for consistency
 
-INSTALLATION & USAGE
-SETUP
+**INSTALLATION & USAGE
+SETUP**
 
-Download all project files to a local directory
+-Download all project files to a local directory
 
-Open index.html in any modern web browser
+-Open index.html in any modern web browser
 
-No additional installation or setup required
+-No additional installation or setup required
 
-USAGE
+**USAGE**
 
-Create your first study schedule
+-Create your first study schedule
 
-Add subjects with appropriate difficulty levels
+-Add subjects with appropriate difficulty levels
 
-Set your exam date and daily study hours
+-Set your exam date and daily study hours
 
-Follow the generated priority-based study plan
+-Follow the generated priority-based study plan
 
-Track progress and use the Pomodoro timer for focus
+-Track progress and use the Pomodoro timer for focus
 
-DATA PERSISTENCE
+**DATA PERSISTENCE**
 
-All data is automatically saved to browser localStorage
+-All data is automatically saved to browser localStorage
 
-Schedules persist between browser sessions
+-Schedules persist between browser sessions
 
-No account creation or login required
+-No account creation or login required
 
-Data remains private on your local device
+-Data remains private on your local device
 
-PROJECT BENEFITS
+**PROJECT BENEFITS**
+
 FOR STUDENTS
 
-Optimized study time allocation based on subject difficulty
+-Optimized study time allocation based on subject difficulty
 
-Reduced exam anxiety through structured planning
+-Reduced exam anxiety through structured planning
 
-Better time management and study habits
+-Better time management and study habits
 
-Visual progress tracking for motivation
+-Visual progress tracking for motivation
 
-Flexible scheduling that adapts to individual needs
+-Flexible scheduling that adapts to individual needs
 
 FOR EDUCATORS
 
-Tool to recommend to students for better study organization
+-Tool to recommend to students for better study organization
 
-Demonstrates effective time management principles
+-Demonstrates effective time management principles
 
-Encourages students to assess subject difficulty honestly
+-Encourages students to assess subject difficulty honestly
 
-Promotes consistent daily study habits
+-Promotes consistent daily study habits
 
 FOR DEVELOPERS
 
-Clean, well-structured codebase for learning
+-Clean, well-structured codebase for learning
 
-Modern web development practices
+-Modern web development practices
 
-Responsive design implementation
+-Responsive design implementation
 
-Local storage and data persistence examples
+-Local storage and data persistence examples
 
-Object-oriented JavaScript architecture
+-Object-oriented JavaScript architecture
 
-CONCLUSION
+**CONCLUSION**
 
 StudySync represents a comprehensive solution to student study planning challenges. By combining intelligent priority algorithms with user-friendly design and motivational features, it helps students maximize their study effectiveness while maintaining engagement through progress tracking and achievements.
 
