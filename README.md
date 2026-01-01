@@ -1,12 +1,12 @@
-**Project StudySync – Smart Study Planner Web Application**
+#**Project StudySync – Smart Study Planner Web Application**
 
-**PROJECT OVERVIEW**
+##**PROJECT OVERVIEW**
 
 StudySync is an intelligent web-based study planner designed to help students create optimized study schedules based on subject difficulty, available time, and exam deadlines. The application uses a priority-based algorithm to ensure students focus more time on challenging subjects while maintaining balanced learning across all topics.
 
-**KEY FEATURES**
+##**KEY FEATURES**
 
-INTELLIGENT PRIORITY SYSTEM
+###INTELLIGENT PRIORITY SYSTEM
 
 -Numerical difficulty levels: Easy (1), Medium (2), Hard (3)
 
@@ -16,7 +16,7 @@ INTELLIGENT PRIORITY SYSTEM
 
 -More study time allocated to higher priority subjects
 
-MULTIPLE SCHEDULE MANAGEMENT
+###MULTIPLE SCHEDULE MANAGEMENT
 
 -Create unlimited study schedules
 
@@ -28,7 +28,7 @@ MULTIPLE SCHEDULE MANAGEMENT
 
 -Delete schedules with confirmation dialog
 
-CUSTOMIZABLE STUDY PARAMETERS
+###CUSTOMIZABLE STUDY PARAMETERS
 
 -Set daily study hours (default: 3 hours, customizable 1–12 hours)
 
@@ -38,7 +38,7 @@ CUSTOMIZABLE STUDY PARAMETERS
 
 -Minimum 1-hour allocation per subject per day
 
-PROGRESS TRACKING & ACHIEVEMENTS
+###PROGRESS TRACKING & ACHIEVEMENTS
 
 -Overall plan progress with visual progress bar
 
@@ -50,7 +50,7 @@ PROGRESS TRACKING & ACHIEVEMENTS
 
 -Percentage completion display
 
-TASK MANAGEMENT
+###TASK MANAGEMENT
 
 -Check off completed tasks with visual feedback
 
@@ -60,7 +60,7 @@ TASK MANAGEMENT
 
 -Persistent storage using browser localStorage
 
-POMODORO TIMER
+###POMODORO TIMER
 
 -Integrated focus timer for study sessions
 
@@ -72,7 +72,7 @@ POMODORO TIMER
 
 -Visual countdown display
 
-MODERN USER INTERFACE
+###MODERN USER INTERFACE
 
 -Responsive design for desktop and mobile devices
 
@@ -84,7 +84,7 @@ MODERN USER INTERFACE
 
 -Accessibility-compliant design
 
-MOTIVATIONAL ELEMENTS
+###MOTIVATIONAL ELEMENTS
 
 -Inspirational quote:
 "Hard work defeats talent when talent doesn't work hard."
@@ -95,9 +95,9 @@ MOTIVATIONAL ELEMENTS
 
 -Clear visual hierarchy showing priorities
 
-**TECHNICAL SPECIFICATIONS**
+##**TECHNICAL SPECIFICATIONS**
 
-FRONTEND TECHNOLOGIES
+###FRONTEND TECHNOLOGIES
 
 -HTML5 with semantic markup
 
@@ -109,7 +109,7 @@ FRONTEND TECHNOLOGIES
 
 -Google Fonts (Inter) for typography
 
-ARCHITECTURE
+###ARCHITECTURE
 
 -Single Page Application (SPA) design
 
@@ -121,7 +121,7 @@ ARCHITECTURE
 
 -No external dependencies or frameworks
 
-DATA STORAGE
+###DATA STORAGE
 
 -Browser localStorage for persistent data
 
@@ -131,7 +131,7 @@ DATA STORAGE
 
 -Data survives browser restarts
 
--RESPONSIVE DESIGN
+###-RESPONSIVE DESIGN
 
 -Mobile-first approach
 
@@ -141,9 +141,9 @@ DATA STORAGE
 
 -Touch-friendly interface elements
 
-**ALGORITHM DETAILS**
+##**ALGORITHM DETAILS**
 
-PRIORITY CALCULATION
+###PRIORITY CALCULATION
 
 -User inputs subjects with difficulty levels (1–3)
 
@@ -155,7 +155,7 @@ PRIORITY CALCULATION
 
 -Subjects sorted by priority score (descending)
 
-TIME ALLOCATION
+###TIME ALLOCATION
 
 -Calculate total priority score for all subjects
 
@@ -165,7 +165,7 @@ TIME ALLOCATION
 
 -Distribute remaining hours based on priority ratios
 
-DAILY SCHEDULING
+###DAILY SCHEDULING
 
 -Generate tasks for each day of the week
 
@@ -175,7 +175,7 @@ DAILY SCHEDULING
 
 -Consistent scheduling across all seven days
 
-PROGRESS TRACKING
+###PROGRESS TRACKING
 
 -Track completion status for each individual task
 
@@ -185,9 +185,9 @@ PROGRESS TRACKING
 
 -Display visual progress bars and achievement badges
 
-**USER WORKFLOW**
+##**USER WORKFLOW**
 
-SCHEDULE CREATION
+###SCHEDULE CREATION
 
 -Click "New Schedule" button
 
@@ -201,7 +201,7 @@ SCHEDULE CREATION
 
 -Click "Generate Study Plan"
 
-SCHEDULE MANAGEMENT
+###SCHEDULE MANAGEMENT
 
 -Select schedules from dropdown menu
 
@@ -211,7 +211,7 @@ SCHEDULE MANAGEMENT
 
 -Switch between multiple active schedules
 
-DAILY STUDY ROUTINE
+###DAILY STUDY ROUTINE
 
 -View prioritized tasks for each day
 
@@ -221,7 +221,7 @@ DAILY STUDY ROUTINE
 
 -Reschedule incomplete tasks to next day if needed
 
-PROGRESS MONITORING
+###PROGRESS MONITORING
 
 -Monitor daily completion percentages
 
@@ -231,15 +231,15 @@ PROGRESS MONITORING
 
 -Adjust study habits based on progress insights
 
-**FILE STRUCTURE**
+##**FILE STRUCTURE**
 
 -index.html   - Main HTML structure and layout  
 -styles.css   - Complete CSS styling and responsive design  
 -script.js    - JavaScript functionality and StudyPlanner class  
 
-**BROWSER COMPATIBILITY**
+##**BROWSER COMPATIBILITY**
 
-SUPPORTED BROWSERS
+###SUPPORTED BROWSERS
 
 -Chrome 70+ (recommended)
 
@@ -249,7 +249,7 @@ SUPPORTED BROWSERS
 
 -Edge 79+
 
-REQUIRED FEATURES
+###REQUIRED FEATURES
 
 -localStorage support
 
@@ -261,9 +261,9 @@ REQUIRED FEATURES
 
 -Notification API (optional, for timer alerts)
 
-**FUTURE ENHANCEMENT POSSIBILITIES**
+##**FUTURE ENHANCEMENT POSSIBILITIES**
 
-ADVANCED FEATURES
+###ADVANCED FEATURES
 
 -Study streak tracking
 
@@ -275,7 +275,7 @@ ADVANCED FEATURES
 
 -Subject-specific study techniques suggestions
 
-TECHNICAL IMPROVEMENTS
+###TECHNICAL IMPROVEMENTS
 
 -Cloud synchronization across devices
 
@@ -287,7 +287,7 @@ TECHNICAL IMPROVEMENTS
 
 -Advanced notification system
 
-GAMIFICATION
+###GAMIFICATION
 
 -Point system for completed tasks
 
@@ -297,8 +297,9 @@ GAMIFICATION
 
 -Reward system for consistency
 
-**INSTALLATION & USAGE
-SETUP**
+##**INSTALLATION & USAGE**
+
+###SETUP
 
 -Download all project files to a local directory
 
@@ -306,7 +307,7 @@ SETUP**
 
 -No additional installation or setup required
 
-**USAGE**
+###USAGE
 
 -Create your first study schedule
 
@@ -318,7 +319,7 @@ SETUP**
 
 -Track progress and use the Pomodoro timer for focus
 
-**DATA PERSISTENCE**
+###DATA PERSISTENCE
 
 -All data is automatically saved to browser localStorage
 
@@ -328,9 +329,9 @@ SETUP**
 
 -Data remains private on your local device
 
-**PROJECT BENEFITS**
+##**PROJECT BENEFITS**
 
-FOR STUDENTS
+###FOR STUDENTS
 
 -Optimized study time allocation based on subject difficulty
 
@@ -342,7 +343,7 @@ FOR STUDENTS
 
 -Flexible scheduling that adapts to individual needs
 
-FOR EDUCATORS
+###FOR EDUCATORS
 
 -Tool to recommend to students for better study organization
 
@@ -352,7 +353,7 @@ FOR EDUCATORS
 
 -Promotes consistent daily study habits
 
-FOR DEVELOPERS
+###FOR DEVELOPERS
 
 -Clean, well-structured codebase for learning
 
@@ -364,7 +365,7 @@ FOR DEVELOPERS
 
 -Object-oriented JavaScript architecture
 
-**CONCLUSION**
+##**CONCLUSION**
 
 StudySync represents a comprehensive solution to student study planning challenges. By combining intelligent priority algorithms with user-friendly design and motivational features, it helps students maximize their study effectiveness while maintaining engagement through progress tracking and achievements.
 
