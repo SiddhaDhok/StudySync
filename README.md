@@ -1,371 +1,265 @@
-#**Project StudySync – Smart Study Planner Web Application**#
+# Project StudySync – Smart Study Planner Web Application
 
-##**PROJECT OVERVIEW**
+## PROJECT OVERVIEW
 
 StudySync is an intelligent web-based study planner designed to help students create optimized study schedules based on subject difficulty, available time, and exam deadlines. The application uses a priority-based algorithm to ensure students focus more time on challenging subjects while maintaining balanced learning across all topics.
 
-##**KEY FEATURES**
+## KEY FEATURES
 
-###INTELLIGENT PRIORITY SYSTEM
+### INTELLIGENT PRIORITY SYSTEM
 
--Numerical difficulty levels: Easy (1), Medium (2), Hard (3)
+- Numerical difficulty levels: Easy (1), Medium (2), Hard (3)
+- Priority Score = Difficulty Level × Days Until Exam
+- Automatic task ordering by priority (highest first)
+- More study time allocated to higher priority subjects
 
--Priority Score = Difficulty Level × Days Until Exam
+### MULTIPLE SCHEDULE MANAGEMENT
 
--Automatic task ordering by priority (highest first)
+- Create unlimited study schedules
+- Each schedule has a unique title and purpose
+- Easy switching between schedules via dropdown menu
+- Edit existing schedules without losing progress
+- Delete schedules with confirmation dialog
 
--More study time allocated to higher priority subjects
+### CUSTOMIZABLE STUDY PARAMETERS
 
-###MULTIPLE SCHEDULE MANAGEMENT
+- Set daily study hours (default: 3 hours, customizable 1–12 hours)
+- Input exam date for automatic priority calculation
+- Add multiple subjects with individual difficulty ratings
+- Minimum 1-hour allocation per subject per day
 
--Create unlimited study schedules
+### PROGRESS TRACKING & ACHIEVEMENTS
 
--Each schedule has a unique title and purpose
+- Overall plan progress with visual progress bar
+- Daily progress tracking for each day of the week
+- Achievement badges when completing days or entire plans
+- Visual indicators for completed tasks
+- Percentage completion display
 
--Easy switching between schedules via dropdown menu
+### TASK MANAGEMENT
 
--Edit existing schedules without losing progress
+- Check off completed tasks with visual feedback
+- Reschedule incomplete tasks to the next day
+- Tasks automatically sorted by priority within each day
+- Persistent storage using browser localStorage
 
--Delete schedules with confirmation dialog
+### POMODORO TIMER
 
-###CUSTOMIZABLE STUDY PARAMETERS
+- Integrated focus timer for study sessions
+- Customizable duration (default: 25 minutes)
+- Start, pause, and reset functionality
+- Browser notification when timer completes
+- Visual countdown display
 
--Set daily study hours (default: 3 hours, customizable 1–12 hours)
+### MODERN USER INTERFACE
 
--Input exam date for automatic priority calculation
+- Responsive design for desktop and mobile devices
+- Beautiful gradient color scheme (purple/blue theme)
+- Clean card-based layout with smooth animations
+- Intuitive icons and visual feedback
+- Accessibility-compliant design
 
--Add multiple subjects with individual difficulty ratings
+### MOTIVATIONAL ELEMENTS
 
--Minimum 1-hour allocation per subject per day
+- Inspirational quote:  
+  "Hard work defeats talent when talent doesn't work hard."
+- Achievement celebrations with animated badges
+- Progress visualization to maintain motivation
+- Clear visual hierarchy showing priorities
 
-###PROGRESS TRACKING & ACHIEVEMENTS
+## TECHNICAL SPECIFICATIONS
 
--Overall plan progress with visual progress bar
+### FRONTEND TECHNOLOGIES
 
--Daily progress tracking for each day of the week
+- HTML5 with semantic markup
+- CSS3 with modern features (Grid, Flexbox, Animations)
+- Vanilla JavaScript (ES6+) for all functionality
+- Font Awesome icons for visual elements
+- Google Fonts (Inter) for typography
 
--Achievement badges when completing days or entire plans
+### ARCHITECTURE
 
--Visual indicators for completed tasks
+- Single Page Application (SPA) design
+- Object-oriented JavaScript with StudyPlanner class
+- Event-driven programming model
+- Local storage for data persistence
+- No external dependencies or frameworks
 
--Percentage completion display
+### DATA STORAGE
 
-###TASK MANAGEMENT
+- Browser localStorage for persistent data
+- JSON format for schedule storage
+- Automatic save on all user actions
+- Data survives browser restarts
 
--Check off completed tasks with visual feedback
+### RESPONSIVE DESIGN
 
--Reschedule incomplete tasks to the next day
+- Mobile-first approach
+- Breakpoints for tablets and desktops
+- Flexible layouts that adapt to screen size
+- Touch-friendly interface elements
 
--Tasks automatically sorted by priority within each day
+## ALGORITHM DETAILS
 
--Persistent storage using browser localStorage
+### PRIORITY CALCULATION
 
-###POMODORO TIMER
+- User inputs subjects with difficulty levels (1–3)
+- User sets exam date
+- System calculates days until exam
+- Priority Score = Difficulty × Days Until Exam
+- Subjects sorted by priority score (descending)
 
--Integrated focus timer for study sessions
+### TIME ALLOCATION
 
--Customizable duration (default: 25 minutes)
+- Calculate total priority score for all subjects
+- Allocate time proportionally based on priority scores
+- Ensure minimum 1 hour per subject per day
+- Distribute remaining hours based on priority ratios
 
--Start, pause, and reset functionality
+### DAILY SCHEDULING
 
--Browser notification when timer completes
+- Generate tasks for each day of the week
+- Sort tasks within each day by priority score
+- Higher priority subjects appear first each day
+- Consistent scheduling across all seven days
 
--Visual countdown display
+### PROGRESS TRACKING
 
-###MODERN USER INTERFACE
+- Track completion status for each individual task
+- Calculate daily progress: completed tasks / total tasks per day
+- Calculate overall progress: completed tasks / total tasks
+- Display visual progress bars and achievement badges
 
--Responsive design for desktop and mobile devices
+## USER WORKFLOW
 
--Beautiful gradient color scheme (purple/blue theme)
+### SCHEDULE CREATION
 
--Clean card-based layout with smooth animations
+- Click "New Schedule" button
+- Enter schedule title (e.g., "Final Exams", "Midterm Prep")
+- Set daily study hours preference
+- Select exam date from date picker
+- Add subjects with difficulty ratings
+- Click "Generate Study Plan"
 
--Intuitive icons and visual feedback
+### SCHEDULE MANAGEMENT
 
--Accessibility-compliant design
+- Select schedules from dropdown menu
+- Edit existing schedules to modify subjects or dates
+- Delete schedules when no longer needed
+- Switch between multiple active schedules
 
-###MOTIVATIONAL ELEMENTS
+### DAILY STUDY ROUTINE
 
--Inspirational quote:
-"Hard work defeats talent when talent doesn't work hard."
+- View prioritized tasks for each day
+- Check off completed tasks as you finish them
+- Use integrated Pomodoro timer for focused sessions
+- Reschedule incomplete tasks to next day if needed
 
--Achievement celebrations with animated badges
+### PROGRESS MONITORING
 
--Progress visualization to maintain motivation
+- Monitor daily completion percentages
+- Track overall plan progress
+- Celebrate achievements when completing days/plans
+- Adjust study habits based on progress insights
 
--Clear visual hierarchy showing priorities
+## FILE STRUCTURE
 
-##**TECHNICAL SPECIFICATIONS**
+- index.html - Main HTML structure and layout
+- styles.css - Complete CSS styling and responsive design
+- script.js - JavaScript functionality and StudyPlanner class
 
-###FRONTEND TECHNOLOGIES
 
--HTML5 with semantic markup
+## BROWSER COMPATIBILITY
 
--CSS3 with modern features (Grid, Flexbox, Animations)
+### SUPPORTED BROWSERS
 
--Vanilla JavaScript (ES6+) for all functionality
+- Chrome 70+ (recommended)
+- Firefox 65+
+- Safari 12+
+- Edge 79+
 
--Font Awesome icons for visual elements
+### REQUIRED FEATURES
 
--Google Fonts (Inter) for typography
+- localStorage support
+- ES6 JavaScript features
+- CSS Grid and Flexbox
+- Date input type
+- Notification API (optional, for timer alerts)
 
-###ARCHITECTURE
+## FUTURE ENHANCEMENT POSSIBILITIES
 
--Single Page Application (SPA) design
+### ADVANCED FEATURES
 
--Object-oriented JavaScript with StudyPlanner class
+- Study streak tracking
+- Performance analytics and insights
+- Integration with calendar applications
+- Study group collaboration features
+- Subject-specific study techniques suggestions
 
--Event-driven programming model
+### TECHNICAL IMPROVEMENTS
 
--Local storage for data persistence
+- Cloud synchronization across devices
+- Offline functionality with service workers
+- Export schedules to PDF or calendar formats
+- Dark mode theme option
+- Advanced notification system
 
--No external dependencies or frameworks
+### GAMIFICATION
 
-###DATA STORAGE
+- Point system for completed tasks
+- Achievement levels and badges
+- Leaderboards for study groups
+- Reward system for consistency
 
--Browser localStorage for persistent data
+## INSTALLATION & USAGE
 
--JSON format for schedule storage
+### SETUP
 
--Automatic save on all user actions
+- Download all project files to a local directory
+- Open index.html in any modern web browser
+- No additional installation or setup required
 
--Data survives browser restarts
+### USAGE
 
-###-RESPONSIVE DESIGN
+- Create your first study schedule
+- Add subjects with appropriate difficulty levels
+- Set your exam date and daily study hours
+- Follow the generated priority-based study plan
+- Track progress and use the Pomodoro timer for focus
 
--Mobile-first approach
+### DATA PERSISTENCE
 
--Breakpoints for tablets and desktops
+- All data is automatically saved to browser localStorage
+- Schedules persist between browser sessions
+- No account creation or login required
+- Data remains private on your local device
 
--Flexible layouts that adapt to screen size
+## PROJECT BENEFITS
 
--Touch-friendly interface elements
+### FOR STUDENTS
 
-##**ALGORITHM DETAILS**
+- Optimized study time allocation based on subject difficulty
+- Reduced exam anxiety through structured planning
+- Better time management and study habits
+- Visual progress tracking for motivation
+- Flexible scheduling that adapts to individual needs
 
-###PRIORITY CALCULATION
+### FOR EDUCATORS
 
--User inputs subjects with difficulty levels (1–3)
+- Tool to recommend to students for better study organization
+- Demonstrates effective time management principles
+- Encourages students to assess subject difficulty honestly
+- Promotes consistent daily study habits
 
--User sets exam date
+### FOR DEVELOPERS
 
--System calculates days until exam
+- Clean, well-structured codebase for learning
+- Modern web development practices
+- Responsive design implementation
+- Local storage and data persistence examples
+- Object-oriented JavaScript architecture
 
--Priority Score = Difficulty × Days Until Exam
-
--Subjects sorted by priority score (descending)
-
-###TIME ALLOCATION
-
--Calculate total priority score for all subjects
-
--Allocate time proportionally based on priority scores
-
--Ensure minimum 1 hour per subject per day
-
--Distribute remaining hours based on priority ratios
-
-###DAILY SCHEDULING
-
--Generate tasks for each day of the week
-
--Sort tasks within each day by priority score
-
--Higher priority subjects appear first each day
-
--Consistent scheduling across all seven days
-
-###PROGRESS TRACKING
-
--Track completion status for each individual task
-
--Calculate daily progress: completed tasks / total tasks per day
-
--Calculate overall progress: completed tasks / total tasks
-
--Display visual progress bars and achievement badges
-
-##**USER WORKFLOW**
-
-###SCHEDULE CREATION
-
--Click "New Schedule" button
-
--Enter schedule title (e.g., "Final Exams", "Midterm Prep")
-
--Set daily study hours preference
-
--Select exam date from date picker
-
--Add subjects with difficulty ratings
-
--Click "Generate Study Plan"
-
-###SCHEDULE MANAGEMENT
-
--Select schedules from dropdown menu
-
--Edit existing schedules to modify subjects or dates
-
--Delete schedules when no longer needed
-
--Switch between multiple active schedules
-
-###DAILY STUDY ROUTINE
-
--View prioritized tasks for each day
-
--Check off completed tasks as you finish them
-
--Use integrated Pomodoro timer for focused sessions
-
--Reschedule incomplete tasks to next day if needed
-
-###PROGRESS MONITORING
-
--Monitor daily completion percentages
-
--Track overall plan progress
-
--Celebrate achievements when completing days/plans
-
--Adjust study habits based on progress insights
-
-##**FILE STRUCTURE**
-
--index.html   - Main HTML structure and layout  
--styles.css   - Complete CSS styling and responsive design  
--script.js    - JavaScript functionality and StudyPlanner class  
-
-##**BROWSER COMPATIBILITY**
-
-###SUPPORTED BROWSERS
-
--Chrome 70+ (recommended)
-
--Firefox 65+
-
--Safari 12+
-
--Edge 79+
-
-###REQUIRED FEATURES
-
--localStorage support
-
--ES6 JavaScript features
-
--CSS Grid and Flexbox
-
--Date input type
-
--Notification API (optional, for timer alerts)
-
-##**FUTURE ENHANCEMENT POSSIBILITIES**
-
-###ADVANCED FEATURES
-
--Study streak tracking
-
--Performance analytics and insights
-
--Integration with calendar applications
-
--Study group collaboration features
-
--Subject-specific study techniques suggestions
-
-###TECHNICAL IMPROVEMENTS
-
--Cloud synchronization across devices
-
--Offline functionality with service workers
-
--Export schedules to PDF or calendar formats
-
--Dark mode theme option
-
--Advanced notification system
-
-###GAMIFICATION
-
--Point system for completed tasks
-
--Achievement levels and badges
-
--Leaderboards for study groups
-
--Reward system for consistency
-
-##**INSTALLATION & USAGE**
-
-###SETUP
-
--Download all project files to a local directory
-
--Open index.html in any modern web browser
-
--No additional installation or setup required
-
-###USAGE
-
--Create your first study schedule
-
--Add subjects with appropriate difficulty levels
-
--Set your exam date and daily study hours
-
--Follow the generated priority-based study plan
-
--Track progress and use the Pomodoro timer for focus
-
-###DATA PERSISTENCE
-
--All data is automatically saved to browser localStorage
-
--Schedules persist between browser sessions
-
--No account creation or login required
-
--Data remains private on your local device
-
-##**PROJECT BENEFITS**
-
-###FOR STUDENTS
-
--Optimized study time allocation based on subject difficulty
-
--Reduced exam anxiety through structured planning
-
--Better time management and study habits
-
--Visual progress tracking for motivation
-
--Flexible scheduling that adapts to individual needs
-
-###FOR EDUCATORS
-
--Tool to recommend to students for better study organization
-
--Demonstrates effective time management principles
-
--Encourages students to assess subject difficulty honestly
-
--Promotes consistent daily study habits
-
-###FOR DEVELOPERS
-
--Clean, well-structured codebase for learning
-
--Modern web development practices
-
--Responsive design implementation
-
--Local storage and data persistence examples
-
--Object-oriented JavaScript architecture
-
-##**CONCLUSION**
+## CONCLUSION
 
 StudySync represents a comprehensive solution to student study planning challenges. By combining intelligent priority algorithms with user-friendly design and motivational features, it helps students maximize their study effectiveness while maintaining engagement through progress tracking and achievements.
 
